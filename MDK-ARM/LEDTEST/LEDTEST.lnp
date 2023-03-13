@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
+"ledtest\startup_stm32l475xx.o"
+"ledtest\main.o"
+"ledtest\gpio.o"
+"ledtest\stm32l4xx_it.o"
+"ledtest\stm32l4xx_hal_msp.o"
+"ledtest\stm32l4xx_hal_tim.o"
+"ledtest\stm32l4xx_hal_tim_ex.o"
+"ledtest\stm32l4xx_hal.o"
+"ledtest\stm32l4xx_hal_rcc.o"
+"ledtest\stm32l4xx_hal_rcc_ex.o"
+"ledtest\stm32l4xx_hal_flash.o"
+"ledtest\stm32l4xx_hal_flash_ex.o"
+"ledtest\stm32l4xx_hal_flash_ramfunc.o"
+"ledtest\stm32l4xx_hal_gpio.o"
+"ledtest\stm32l4xx_hal_dma.o"
+"ledtest\stm32l4xx_hal_dma_ex.o"
+"ledtest\stm32l4xx_hal_pwr.o"
+"ledtest\stm32l4xx_hal_pwr_ex.o"
+"ledtest\stm32l4xx_hal_cortex.o"
+"ledtest\stm32l4xx_hal_exti.o"
+"ledtest\system_stm32l4xx.o"
+--strict --scatter "LEDTEST\LEDTEST.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LEDTEST.map" -o LEDTEST\LEDTEST.axf
